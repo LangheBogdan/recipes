@@ -22,3 +22,6 @@ build/
 # Log-uri
 *.log
 npm-debug.log*
+
+# TODO
+TODO.md
