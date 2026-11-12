@@ -1,0 +1,24 @@
+# IDE - JetBrains / WebStorm
+.idea/
+*.iml
+
+# Sistem de operare (Linux / Ubuntu & general)
+*~
+.directory
+.DS_Store
+
+# Dependențe (Node.js / Front-end & Back-end)
+node_modules/
+
+# Build, arhivă și output
+dist/
+build/
+
+# Variabile de mediu și secrete (Back-end)
+.env
+.env.local
+.env.*.local
+
+# Log-uri
+*.log
+npm-debug.log*
