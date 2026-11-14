@@ -1,0 +1,126 @@
+/* Modern CSS Reset */
+
+/* 1. Use a more intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margins (preserving <dialog> auto-centering) */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Prevent font size inflation on mobile browsers */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* 4. Smooth scrolling only when motion is not reduced */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* 5. Set core body defaults */
+body {
+  min-height: 100svh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults and preserve aspect ratios */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+}
+
+/* 8. Ensure text areas without a rows attribute have a sensible height */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* 9. Avoid text overflows and improve typography wrapping */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+p,
+li,
+figcaption {
+  text-wrap: pretty;
+}
+
+/* 10. Remove list styles only when explicitly marked as list-role (preserves accessibility in Safari) */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  padding: 0;
+}
+
+/* 11. Cleaner underline ink-skipping for links */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* 12. Normalize table borders */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 13. Add breathing room when jumping to anchored targets */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* 14. Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
